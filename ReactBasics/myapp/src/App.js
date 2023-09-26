@@ -7,9 +7,6 @@ function App() {
     <>
       <Chai />
       <h1>This is react app</h1>
-
-
-
     </>
 
   );

@@ -1,14 +1,17 @@
-import Chai from "./Chai"
+// import React from "react";
+import Chai from "./components/Chai";
+import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
+import data from "./data/data.js"; // Import the data
 
 function App() {
-
-
   return (
     <>
+      <Navbar />
       <Chai />
-      <h1>This is my first Vite+React Ap</h1>
+      <Profile {...data} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
