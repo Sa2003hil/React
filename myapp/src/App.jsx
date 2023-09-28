@@ -11,13 +11,17 @@ import Company from './components/Company'
 import Video from './components/videos';
 import './App.css'
 import videos from './data/videodata';
+import Newsletter from './components/Newsletter'
+import Posts from './components/Posts'
+import Counter from './components/counter';
+import Postinfo from './components/Posting'
 
 
 
 function App() {
   // const [count, setCount] = useState(0)
-  const Email = "Email Dedo"
-  const Field = "Password Dedo"
+  // const Email = "Email Dedo"
+  // const Field = "Password Dedo"
 
   // let videos = [
   //   {
@@ -95,6 +99,10 @@ function App() {
           vidlink='https://www.youtube.com/watch?v=KQ5zW5pXQZk'
           verified={true} />
       </div>
+      <Postinfo/>
+      <Posts />
+      {/* <Counter /> */}
+      <Newsletter />
       {/* ---->     This is the old method without map and spread operator */}
 
       {/* < Signin Email={Email} Field={Field} /> */}

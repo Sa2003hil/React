@@ -3,6 +3,13 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useAuth0 } from '@auth0/auth0-react'
 import '../assets/logo.png'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+
+library.add(fab, faCheckSquare, faCoffee)
 
 const navigation = [
     { name: 'Product', href: '#' },
@@ -21,13 +28,15 @@ export default function Example() {
             <header className="absolute inset-x-0 top-0 z-50">
                 <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1  h-10">
-                        <a href="#" className="-m-1.5 p-1.5">
+                        <a href="#" className="-m-1.5 p-1.5 h-3">
                             <span className="sr-only">Your Company</span>
-                            <img
+                            {/* <img
                                 className="h-10 w-auto"
                                 src="https://banner2.cleanpng.com/20171216/605/twitter-logo-png-5a355d8a863ba6.9233809415134467945498.jpg"
                                 alt=""
-                            />
+                            /> */}
+
+                            <FontAwesomeIcon className=' h-12' icon="fa-brands fa-square-x-twitter" size="2xl" style={{ color: "#000000", }} />
                         </a>
                     </div>
                     <div className="flex lg:hidden">
