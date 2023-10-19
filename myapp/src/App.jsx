@@ -3,6 +3,7 @@
 // import viteLogo from '/vite.svg'
 // import Testimonial from './components/Testimonials'
 // import Navbar from './components/Navbar'
+import { useState } from 'react'
 import Herosection from './components/Herosection'
 import Footer from './components/Footer'
 // import Signin from './components/Signin'
@@ -10,11 +11,12 @@ import Ecommerce from './components/Ecommerce'
 import Company from './components/Company'
 import Video from './components/videos';
 import './App.css'
-import videos from './data/videodata';
+import videosDB from './data/videodata';
 import Newsletter from './components/Newsletter'
 import Posts from './components/Posts'
-import Counter from './components/counter';
+// import Counter from './components/counter';
 import Postinfo from './components/Posting'
+import AddVideosForm from './components/AddVideosForm'
 
 
 
@@ -43,6 +45,16 @@ function App() {
 
   // ]  // Put this data of videos in a separate file and import it here this is called Refactoring
 
+  const [videos, setVideos] = useState(videosDB);
+
+  function addVideos(video) {
+    setVideos([
+      ...videos,
+      { ...video, id: videos.length + 1 }
+    ])
+  }
+  // console.log('Rendering App');
+
   return (
     <>
       {/* <h1 className=' bg-green-400 p-5 rounde font-bold text-center '>this is tailwind</h1> */}
@@ -51,8 +63,9 @@ function App() {
       <Herosection />
       <Company />
       <Ecommerce />
+      <AddVideosForm addVideos={addVideos} />
 
-      <div className='flex mt-10 mx-20'>
+      <div className='flex mt-10 mx-20 flex-wrap gap-9'>
         {/* <Video
           channelName='Nike Official'
           views='220k'
@@ -85,21 +98,24 @@ function App() {
         }
 
 
-        <Video
 
-          // onPlay={() => console.log('playing')}
-          // onPause={() => console.log('paused')}
+        {/* <Video
 
+        // onPlay={() => console.log('playing')}
+        // onPause={() => console.log('paused')}
 
-          channelName='Elvish Yadav'
-          views='2M'
-          thumbnailUrl='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNp4iIxTIoN1GcrOQjHnRrnfOy9e2_4_cZqA&usqp=CAU'
-          time='2 days'
-          title='Badmashi Teaser | Elvish Yadav'
-          vidlink='https://www.youtube.com/watch?v=KQ5zW5pXQZk'
-          verified={true} />
+        // key='3'
+        // channelName='Elvish Yadav'
+        // views='2M'
+        // thumbnailUrl='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNp4iIxTIoN1GcrOQjHnRrnfOy9e2_4_cZqA&usqp=CAU'
+        // time='2 days'
+        // title='Badmashi Teaser | Elvish Yadav'
+        // vidlink='https://www.youtube.com/watch?v=KQ5zW5pXQZk'
+        // verified={true}
+        /> */}
+        <Video />
       </div>
-      <Postinfo/>
+      <Postinfo />
       <Posts />
       {/* <Counter /> */}
       <Newsletter />
