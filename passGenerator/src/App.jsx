@@ -1,13 +1,20 @@
-import { useState, useCallback, useEffect } from 'react'
+// usecallback is used to prevent the re-rendering of the component when the state is changed
+
+import { useState, useCallback, useEffect, useRef } from 'react'
 
 import './App.css'
 
 function App() {
   const [length, setLength] = useState(8)
-  const [numberAllowed, setNumberAllowed] = useState(false)
-  const [characters, setCharAllowded] = useState(false)
+  const [numberAllowed, setNumberAllowed] = useState(false) // initially false
+  const [characters, setCharAllowded] = useState(false) // initially false
   const [Password, setPassword] = useState("")
 
+
+  // useRef Hook 
+  const passRef = useRef(null)
+
+  // useCallback is a React Hook that lets you cache a function (memoization) definition between re-renders.
   const passGenerator = useCallback(() => {
     let pass = ""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -15,7 +22,7 @@ function App() {
     if (numberAllowed) {
       str += "0123456789"
     }
-    else {
+    if (characters) {
       str += "!@#$%^&*()_+[]{}"
     }
 
@@ -26,7 +33,17 @@ function App() {
     }
     setPassword(pass)
 
-  }, [length, numberAllowed, setPassword])
+  }, [length, numberAllowed, characters, setPassword])
+
+
+  const copyPassToClipboard = useCallback(() => {
+    passRef.current.select()
+    // we can select within the range 
+    passRef.current.setSelectionRange(0, 3)
+    window.navigator.clipboard.writeText(Password)
+  }, [Password])
+
+  // useEffect is a React Hook that lets you use side effects in functional components.
 
   useEffect(() => {
     passGenerator()
@@ -44,8 +61,12 @@ function App() {
               value={Password}
               className='mr-6 h-9  max-w-md rounded-lg outline-none w-full py-1 px-3'
               placeholder='Password'
+              ref={passRef}
             />
-            <button className=' hover: bg-purple-700   text-center w-40 h-9.5 mt-4 p-1'>
+            <button
+              className=' hover: bg-purple-700   text-center w-40 h-9.5 mt-4 p-1'
+              onClick={copyPassToClipboard}
+            >
               Copy
             </button>
           </div>

@@ -113,7 +113,7 @@ function App() {
         // vidlink='https://www.youtube.com/watch?v=KQ5zW5pXQZk'
         // verified={true}
         /> */}
-        <Video />
+        {/* <Video /> */}
       </div>
       <Postinfo />
       <Posts />
