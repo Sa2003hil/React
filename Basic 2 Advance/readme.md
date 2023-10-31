@@ -12,26 +12,12 @@ Welcome to the comprehensive repository dedicated to teaching ReactJS in depth. 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/hiteshchoudhary/chai-aur-react.git
+   git clone https://github.com/sa2003hil/react
    ```
 
 2. Navigate to each project folder and follow the instructions in the respective README to set up and run the project.
 
-3. Parallelly, watch the video lessons on the ["chai aur code" YouTube channel](https://www.youtube.com/channel/UCNQ6FEtztATuaVhZKCY28Yw) for a detailed walk-through.
-
 ## 📚 Modules & Projects
-
-1. **React JS RoadMap**:
-   
-   - [Watch Lesson](https://www.youtube.com/watch?v=vz1RlUyrc3w&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige)
-
-2. **Create react projects**:
-   - [Watch Lesson](https://www.youtube.com/watch?v=k3KqQvywToE&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&index=2)
-
-3. **Understand the react flow and structure**:
-   - [Watch Lesson](https://www.youtube.com/watch?v=yNbnA5pryMg&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&index=3)
-4. **Create your own react library and JSX**:
-   - [Watch Lesson](https://www.youtube.com/watch?v=kAOuj6o7Kxs&list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&index=4)
 
 ... _(on going series)_
 
@@ -44,10 +30,6 @@ Welcome to the comprehensive repository dedicated to teaching ReactJS in depth. 
 
 Contributions are always welcomed. Feel free to raise issues or send in pull requests. Please do not update the existing code as users when they watch videos, they expect same code in repo.
 
-## 📺 "chai aur code" on YouTube
-
-Don't forget to subscribe to ["chai aur code"](https://www.youtube.com/channel/UCNQ6FEtztATuaVhZKCY28Yw) on YouTube for the entire video series and much more!
-
 ## 🙏 Acknowledgements
 
 A big thank you to the React community, Open Source contributors, and all the students and professionals who've provided their feedback and support to make this series better!
@@ -58,4 +40,4 @@ A big thank you to the React community, Open Source contributors, and all the st
 
 ---
 
-_Made with ☕️ by HiteshChoudhary_
+_Made by CodeWithSahil_
