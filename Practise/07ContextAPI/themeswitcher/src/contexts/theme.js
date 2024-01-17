@@ -15,11 +15,11 @@ export const ThemeContext = createContext({
 });
 
 
-// Here we are using provider in the same file and not making a separate file for it
+//^ Here we are using provider in the same file and not making a separate file for it
 export const ThemeProvider = ThemeContext.Provider;
 
 
-// creating a custom hook (In the previous approach we have to import useContext and UserContext in every file where we want to use the context) so to avoid this we are making a custom hook
+//^ creating a custom hook (In the previous approach we have to import useContext and UserContext in every file where we want to use the context) so to avoid this we are making a custom hook
 export default function useTheme() {
     return useContext(ThemeContext)
 }

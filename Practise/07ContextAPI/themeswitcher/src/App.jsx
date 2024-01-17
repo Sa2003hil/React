@@ -1,6 +1,7 @@
 import './App.css'
 import Card from './components/Card'
 import ThemeBtn from './components/ThemeBtn'
+import CourseForm from './components/CourseForm'
 import { ThemeProvider } from './contexts/theme'
 import { useEffect, useState } from 'react'
 
@@ -29,7 +30,10 @@ function App() {
 
   return (
     <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
-      <div className=' text-lg font-semibold'>Welcome to the theme switcher</div>
+      <div className=' text-lg font-bold bg-black w-[50%] rounded-full m-auto p-4 text-white'>Welcome to CodeAcadmey</div>
+      <div className=' m-auto items-center justify-center flex mt-10'>
+        <CourseForm />
+      </div>
       <div className="flex flex-wrap min-h-screen items-center">
         <div className="w-full">
           <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
