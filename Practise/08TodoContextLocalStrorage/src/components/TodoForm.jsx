@@ -21,11 +21,11 @@ const TodoForm = () => {
     return (
         <>
             <form onSubmit={add}>
-                <div className="relative h-[40vh] flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border">
-                    {/* <Typography color="blue-gray" classNameName="flex justify-center m-auto text-gray-500 text-2xl font-thin  gap-1 mb-3">
-                    Sign In
-                </Typography>
-                <hr className=" mb-2 w-[50%] m-auto" /> */}
+                <div className="relative h-[45vh] flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border">
+                    <Typography color="blue-gray" className="flex  justify-center m-auto text-gray-500 text-[18px] font-thin  gap-1 mb-3">
+                        Powered by CWS  {' '}<a className='text-[18px] text-black hover:text-gray-800  hover:transition-all hover:ease-out hover:ml-3' href="https://codewithsahil.vercel.app/">Read more<span aria-hidden="true">&rarr;</span></a>
+                    </Typography>
+                    <hr className=" bg-black mb-2 w-[50%] m-auto" />
                     <Typography color="blue-gray"
                         className="flex justify-center m-auto text-4xl gap-1 mb-8">
                         Manage your <span className=" text-pink-400 font-medium">TODOS</span>
