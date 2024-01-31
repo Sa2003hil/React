@@ -7,13 +7,17 @@ function App() {
 
   //^ this is how we set the todos 
   const addTodo = (todo) => {
-    setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]); // This is how we add the todos
+    setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]); // setTodos((oldArray)=>[...puraniValues,nyaTodo])
+    // setTodos((oldArray)=>[{...ObjectOfNyaTodo},puraniValues])
   }
 
   //^ Update the todos 
   const updateTodo = (id, todo) => {
     setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)));
+    // setTodos((prevStateOfArray) => prev.map((IndividualprevTodo) => (IndividualprevTodo.id === id ? nyaTODO : puranaTodo)));
   }
+
+
 
   //^ Delete the todos
   const deleteTodo = (id) => {
