@@ -26,7 +26,7 @@ function TodoItem({ todo }) {
         >
             <Checkbox
                 className='bg-white cursor-pointer'
-                type='checkbox'
+                // type='checkbox'
                 checked={todo.completed}
                 onChange={toggleCompleted}
             />
