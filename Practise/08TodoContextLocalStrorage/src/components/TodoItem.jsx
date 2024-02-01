@@ -24,15 +24,14 @@ function TodoItem({ todo }) {
             className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-xl duration-300 s  text-black ${todo.completed ? "bg-[#487223]" : "bg-[#000000]"
                 }`}
         >
-            <label htmlFor="checkbox" className="relative flex items-center rounded-full cursor-pointer">
-                <Checkbox
-                    className='bg-white '
-                    // type='checkbox'
-                    checked={todo.completed}
-                    onChange={toggleCompleted}
-                />
+            <Checkbox
+                className='bg-white '
+                // type='checkbox'
+                checked={todo.completed}
+                onChange={toggleCompleted}
+            />
 
-            </label>
+
 
 
             <input
