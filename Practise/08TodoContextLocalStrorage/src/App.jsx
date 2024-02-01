@@ -64,10 +64,10 @@ function App() {
           <TodoForm />
 
         </div>
-        <div className="flex flex-wrap flex-col items-center justify-center gap-y-3"  >
+        <div className="flex flex-wrap flex-col items-center justify-center gap-y-3  "  >
           {/*Loop and Add TodoItem here */}
           {todos.map((todo) => (
-            <div key={todo.id}>
+            <div key={todo.id} className='transition-all ease-in-out transition-0.2s'>
               <TodoItem key={todo.id} todo={todo} />
             </div>
           ))}
