@@ -25,15 +25,19 @@ function TodoItem({ todo }) {
                 }`}
         >
             <Checkbox
-                className='bg-white cursor-pointer'
+                className='bg-white '
                 // type='checkbox'
                 checked={todo.completed}
                 onChange={toggleCompleted}
             />
+            {/* <label htmlFor="checkbox" className="relative flex items-center p-3 rounded-full cursor-pointer">
+
+            </label> */}
+
 
             <input
                 type="text"
-                className={`border outline-none w-full text-white bg-transparent rounded-lg ${isTodoEditable ? "border-black/10 px-2" : "border-transparent"
+                className={`border outline-none w-full text-white bg-transparent rounded-lg ${isTodoEditable ? "border-gray-600 px-2" : "border-transparent"
                     } ${todo.completed ? "line-through" : ""}`}
                 value={todoMsg}
                 onChange={(e) => setTodoMsg(e.target.value)}

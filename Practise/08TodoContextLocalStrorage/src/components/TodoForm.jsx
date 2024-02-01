@@ -20,8 +20,8 @@ const TodoForm = () => {
 
     return (
         <>
-            <form onSubmit={add}>
-                <div className="relative h-[45vh] flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border">
+            <form onSubmit={add} >
+                <div className="relative h-[45vh] flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border" >
                     <Typography color="blue-gray" className="flex  justify-center m-auto text-gray-500 text-[18px] font-thin  gap-1 mb-3">
                         Powered by CWS  {' '}<a className='text-[18px] text-black hover:text-gray-800  hover:transition-all hover:ease-out hover:ml-3' href="https://codewithsahil.vercel.app/">Read more<span aria-hidden="true">&rarr;</span></a>
                     </Typography>

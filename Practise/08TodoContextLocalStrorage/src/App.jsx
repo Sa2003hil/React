@@ -59,12 +59,12 @@ function App() {
       {/* <div className="bg-[#172842] min-h-screen py-8"> */}
       <div className="w-full mx-auto shadow-md bg-white rounded-lg px-4 py-3 text-white">
         {/* <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1> */}
-        <div className="mb-4">
+        <div className="mb-4" >
           {/* Todo form goes here */}
           <TodoForm />
 
         </div>
-        <div className="flex flex-wrap flex-col items-center justify-center gap-y-3">
+        <div className="flex flex-wrap flex-col items-center justify-center gap-y-3"  >
           {/*Loop and Add TodoItem here */}
           {todos.map((todo) => (
             <div key={todo.id}>
